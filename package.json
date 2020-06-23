@@ -1,6 +1,6 @@
 {
-  "name": "language-arma-atom",
-  "version": "2.14.0",
+  "name": "language-arma-atom-dev",
+  "version": "2.15.0",
   "description": "Syntax highlighting, auto-completions and snippets for sqf and other languages used within the Real Virtuality engine.",
   "keywords": [
     "sqf",
@@ -10,10 +10,10 @@
   ],
   "activationCommands": {
     "atom-workspace": [
-      "language-arma-atom:toggle",
-      "language-arma-atom:open-latest-RPT-file",
-      "language-arma-atom:build-dev",
-      "language-arma-atom:build-release"
+      "language-arma-atom-dev:toggle",
+      "language-arma-atom-dev:open-latest-RPT-file",
+      "language-arma-atom-dev:build-dev",
+      "language-arma-atom-dev:build-release"
     ]
   },
   "activationHooks": [
@@ -24,13 +24,13 @@
     "atom": ">=1.0.0 <2.0.0",
     "node": "*"
   },
-  "homepage": "https://github.com/acemod/language-arma-atom",
+  "homepage": "https://github.com/FieldGeneral1/language-arma-atom",
   "repository": {
     "type": "git",
-    "url": "https://github.com/acemod/language-arma-atom.git"
+    "url": "https://github.com/FieldGeneral1/language-arma-atom.git"
   },
   "bugs": {
-    "url": "https://github.com/acemod/language-arma-atom/issues"
+    "url": "https://github.com/FieldGeneral1/language-arma-atom/issues"
   },
   "dependencies": {
     "copy-newer": "^2.1.1"

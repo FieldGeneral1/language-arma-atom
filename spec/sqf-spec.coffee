@@ -6,8 +6,8 @@ describe "SQF grammar", ->
 
     waitsForPromise ->
       Promise.all [
-        atom.packages.activatePackage("language-arma-atom")
-        atom.commands.dispatch workspaceElement, "language-arma-atom:toggle"
+        atom.packages.activatePackage("language-arma-atom-dev")
+        atom.commands.dispatch workspaceElement, "language-arma-atom-dev:toggle"
       ]
 
     runs ->

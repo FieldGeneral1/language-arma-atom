@@ -48,11 +48,11 @@ module.exports =
   activate: ->
     @subscriptions = new CompositeDisposable
     @subscriptions.add atom.commands.add 'atom-workspace',
-      'language-arma-atom:build-dev': => buildProject.dev()
+      'language-arma-atom-dev:build-dev': => buildProject.dev()
     @subscriptions.add atom.commands.add 'atom-workspace',
-      'language-arma-atom:build-release': => buildProject.release()
+      'language-arma-atom-dev:build-release': => buildProject.release()
     @subscriptions.add atom.commands.add 'atom-workspace',
-      'language-arma-atom:open-latest-RPT-file': => openLatestRptFile.open()
+      'language-arma-atom-dev:open-latest-RPT-file': => openLatestRptFile.open()
 
     # If package is updated, copy required autosuggest files
     copyNewer "language-sqf-native*", "#{__dirname}/snippets", {
@@ -63,9 +63,9 @@ module.exports =
     }
 
     # Copy optional autosuggest files
-    atom.config.observe 'language-arma-atom.autocomplete.includeCba', (checked) ->
+    atom.config.observe 'language-arma-atom-dev.autocomplete.includeCba', (checked) ->
       optionalAutocomplete.set('cba', checked)
-    atom.config.observe 'language-arma-atom.autocomplete.includeAce', (checked) ->
+    atom.config.observe 'language-arma-atom-dev.autocomplete.includeAce', (checked) ->
       optionalAutocomplete.set('ace', checked)
 
   deactivate: ->

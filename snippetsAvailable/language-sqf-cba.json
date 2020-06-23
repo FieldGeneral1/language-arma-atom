@@ -2,9 +2,15 @@
   ".source.sqf": {
     "CBA Add PFH": {
       "prefix": "addPerFrameHandler_cba",
-      "body": "[${1:FUNCTION/CODE}, ${2:DELAY}, [${3:PARAMETERS}]] call CBA_fnc_addPerFrameHandler;",
+      "body": "[{\n    ${1:CODE}\n}, ${2:DELAY}, [${3:PARAMETERS}]] call CBA_fnc_addPerFrameHandler;",
       "description": "Add a per-frame handler, return ID",
       "descriptionMoreURL": "https://dev.withsix.com/docs/cba/files/common/fnc_addPerFrameHandler-sqf.html"
+    },
+    "CBA Add Setting": {
+      "prefix": "addSetting_cba",
+      "body": "[\n    QGVAR(${1:settingName}),\n    \"${2:settingType}\",\n    [localize LSTRING(${3:title}), localize LSTRING(${4:description})],\n    [format [\"5th Cav %1\", localize LSTRING(${5:category})], localize LSTRING(${6:subcategory})],\n    [${5:valueInfo}],\n    ${6:isGlobal},\n    {\n        ${7:scriptOnChange}\n    },\n    ${8:needRestart}\n] call CBA_fnc_addSetting;",
+      "description": "Add a CBA Setting, returns success",
+      "descriptionMoreURL": "https://cbateam.github.io/CBA_A3/docs/files/settings/fnc_addSetting-sqf.html"
     }
   }
 }
